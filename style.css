@@ -1,93 +1,112 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    transition: all 0.4s;
+:root {
+  ---bg-color: #11001c;
+  ---primary: #2e165b;
+  ---secondary: #7e4eac;
+  ---hover: #7400bb;
 }
-body{
-    font-family: sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-a{
-    text-decoration: none;
-    color: black;
-    font-size: 1.3rem;
-    font-weight: bold;
+body {
+  font-family: sans-serif;
+  background-color: var(---bg-color);
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
 }
 
 /* navbar styling */
-.navbar{
-    display: flex;
-    height: 5rem;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1rem;
-    border-bottom: 2px solid rgb(223, 251, 219);
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 5rem;
+  padding-right: 1.5rem;
 }
 
-/* logo style  */
-.logo img{
-    width: 4rem;
-    height: 4rem;
-    margin-left:1rem;
+.hamburger-menu {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
 }
 
-.hamburger-menu{
-    padding-right: 1.5rem;
-    cursor: pointer;
+.hamburger-menu .line {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  background-color: #7e4eac;
 }
 
-.hamburger-menu .line{
-   display: block;
-   width:2.5rem;
-   height: 2px;
-   margin-bottom: 10px;
-   background-color: black;
-   cursor: pointer;
+.nav-menu {
+  position: fixed;
+  width: 94%;
+  top: 6rem;
+  right: 18px;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: 600;
+}
+.nav-menu a {
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+}
+.nav-menu a:hover {
+  color: var(---hover);
 }
 
-.nav-menu{
-    position: fixed;
-    width: 94%;
-    top: 6rem;
-    left: 18px;
-    background-color: rgb(255, 255, 255);
-    font-weight: 600;
-
+.hide {
+  display: none;
 }
-.nav-menu a{
+
+/* for Desktop view */
+@media screen and (min-width: 600px) {
+  .navbar {
+    justify-content: flex-end;
+  }
+  .nav-menu {
     display: block;
-    text-align: center;
-    padding: 5px 0;
-}
-.nav-menu a:hover{
-    background-color: rgb(223, 251, 219);
-}
+    position: static;
+    width: auto;
+    margin-right: 20px;
+    background: none;
+  }
+  .nav-menu a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
 
-.hide{
+  .hamburger-menu {
     display: none;
+  }
 }
-
-/* for Desktop view  */
-@media screen and (min-width:600px){
-    .navbar{
-        justify-content: space-around;
-    }
-    .nav-menu{
-        display: block;
-        position: static;
-        width: auto;
-        margin-right:20px;
-        background: none;
-    }
-    .nav-menu a{
-        display: inline-block;
-        padding: 15px 20px;
-    }
-    .nav-menu a:hover{
-        background-color: rgb(223, 251, 219);
-        border-radius: 5px;
-    }
-    .hamburger-menu{
-        display: none;
-    }
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.container{
+  position: absolute;
+  top: 0;
+  z-index: 10000;
+}
+.welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 10rem;
+  font-weight: bold;
+  color:#b572f495;
+  z-index: 1; /* Ensures the text is above the canvas */
 }
