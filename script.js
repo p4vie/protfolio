@@ -14,20 +14,20 @@ const center = {
 };
 
 const params = {
-  radius: 150, // Base radius of the circle
-  morphStrength: 0.1, // How much the shape morphs
-  rotationSpeed: 0.005, // Speed of rotation
+  radius: 250, // Base radius of the circle
+  morphStrength: 0.02, // How much the shape morphs
+  rotationSpeed: 0.0005, // Speed of rotation
   colors: [
-    "rgba(128, 0, 128, 1)",  
-    "rgba(75, 0, 130, 1)",   
-    "rgba(139, 0, 139, 1)",  
-    "rgba(147, 112, 219, 1)", 
-    "rgba(186, 85, 211, 1)", 
+    "rgba(128, 0, 128, 1)",
+    "rgba(75, 0, 130, 1)",
+    "rgba(139, 0, 139, 1)",
+    "rgba(147, 112, 219, 1)",
+    "rgba(186, 85, 211, 1)",
   ],
 };
 
 let mouse = { x: center.x, y: center.y };
-let rotation = 0; 
+let rotation = 0;
 
 window.addEventListener("mousemove", (e) => {
   mouse.x = e.pageX;
@@ -42,10 +42,9 @@ function update() {
   const dy = mouse.y - center.y;
   const distance = Math.sqrt(dx * dx + dy * dy);
 
-  
   const morphFactor = Math.min(distance / canvas.width, params.morphStrength);
 
-  rotation += params.rotationSpeed; 
+  rotation += params.rotationSpeed;
 
   ctx.save();
   ctx.translate(center.x, center.y);
@@ -54,7 +53,8 @@ function update() {
   ctx.beginPath();
 
   for (let angle = 0; angle < Math.PI * 2; angle += Math.PI / 60) {
-    const waveOffset = Math.sin(angle * 8 + rotation) * morphFactor * params.radius * 0.3;
+    const waveOffset =
+      Math.sin(angle * 8 + rotation) * morphFactor * params.radius * 0.3;
     const offset =
       Math.sin(angle * 6 + distance * 0.02) * morphFactor * params.radius +
       waveOffset;
@@ -92,6 +92,6 @@ function setupCanvas() {
 
 window.addEventListener("resize", setupCanvas);
 
-
 setupCanvas();
 update();
+
