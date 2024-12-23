@@ -1,5 +1,5 @@
 /* Importing Font */
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 /* :root Variables for Colors */
 :root {
@@ -149,15 +149,16 @@ canvas {
 }
 
 @keyframes floating-secondary {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0);
   }
   50% {
     transform: translate(0, 5vh);
   }
 }
-/* About Description Container Styling */
-.about_discription {
+.about_discription,
+.about_discription2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -165,46 +166,102 @@ canvas {
   gap: 20px;
 }
 
-/* Styling for the Paragraph */
-.about_discription p {
-  flex: 1; /* Allows the paragraph to take up remaining space */
+/* Section-specific layout adjustments */
+.about_discription {
+  flex-direction: row-reverse;
+}
+
+.about_discription2 {
+  flex-direction: row;
+}
+
+/* Common styles for the text content */
+.text_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Spacing between subheading, paragraph, and buttons */
+}
+
+.text_content h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color:var(--secondary);
+}
+
+.text_content p {
   margin: 0;
   font-size: 1rem;
   line-height: 1.5;
   color: white;
+  font-weight: lighter; 
+  margin-bottom: 10px;
 }
 
-/* Styling for the Image Container */
-.about_discription .element_img {
-  flex: 0 0 auto; /* Prevents the image from stretching */
-  max-width: 40%; /* Adjust width as needed */
+.button_group {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 10px; /* Spacing between buttons */
 }
 
-.about_discription .element_img img {
+.button_group button {
+  background-color:#360058;
+  color: white;
+  border: none;
+  padding:1.5rem 3rem;
+  border-radius:1cm;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.button_group button:hover{
+  background-color: var(--hover);
+}
+.button_group button a {
+  text-decoration: none;
+  color: white;
+}
+.button_group {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 10px; /* Spacing between buttons */
+}
+.element_img,
+.element_img2 {
+  flex: 0 0 auto;
+  max-width: 40%;
+}
+
+.element_img img,
+.element_img2 img {
   max-width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px; /* Optional: Rounded corners for the image */
+  border-radius: 8px;
 }
+
 
 /* Details Section Styling */
 .details {
- margin-top: 70%;
   padding: 50px 20px;
   text-align: center;
 }
-
+.secondary_heading {
+  margin: 3rem 0;
+  color: var(--secondary);
+  font-size: 3rem;
+}
 .cards-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 }
 
 .card {
   position: relative;
-  width: 220px;
-  height: 320px;
+  width: 320px;
+  height: 330px;
   background: var(--primary);
   display: flex;
   align-items: center;
@@ -246,8 +303,7 @@ canvas {
 
 /* Contact Section Styling */
 .contact {
-  margin-top: 80%;
-  padding: 50px 20px;
+  padding: 100px;
   display: flex;
   justify-content: center;
 }
@@ -255,8 +311,7 @@ canvas {
 .form-container {
   width: 100%;
   max-width: 600px;
-  background: linear-gradient(#2121212d, #21212123) padding-box,
-              linear-gradient(145deg, transparent 35%, #e81cff40, #40c9ff39) border-box;
+ 
   border: 2px solid transparent;
   padding: 32px 24px;
   border-radius: 16px;

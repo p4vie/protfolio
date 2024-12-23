@@ -17,13 +17,7 @@ const params = {
   radius: 250, // Base radius of the circle
   morphStrength: 0.02, // How much the shape morphs
   rotationSpeed: 0.0005, // Speed of rotation
-  colors: [
-    "rgba(128, 0, 128, 1)",
-    "rgba(75, 0, 130, 1)",
-    "rgba(139, 0, 139, 1)",
-    "rgba(147, 112, 219, 1)",
-    "rgba(186, 85, 211, 1)",
-  ],
+  colors: ["rgb(146, 8, 146)", "rgb(38, 5, 103)", "rgb(117, 8, 144)"],
 };
 
 let mouse = { x: center.x, y: center.y };
@@ -94,4 +88,3 @@ window.addEventListener("resize", setupCanvas);
 
 setupCanvas();
 update();
-
