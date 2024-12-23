@@ -1,26 +1,40 @@
+/* Importing Font */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* :root Variables for Colors */
 :root {
-  ---bg-color: #11001c;
-  ---primary: #2e165b;
-  ---secondary: #7e4eac;
-  ---hover: #7400bb;
+  --bg-color: #11001c;
+  --primary: #2e165b;
+  --secondary: #7e4eac;
+  --hover: #7400bb;
 }
 
+/* Resetting Box Model and Default Margins/Paddings */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+/* Global Body Styling */
 body {
-  font-family: sans-serif;
-  background-color: var(---bg-color);
+  font-family: "Chakra Petch", serif;
+  font-weight: 600;
+  font-style: italic;
+  background-color: var(--bg-color);
+  color: white;
+  height: 100%;
+  overflow: auto;
 }
+
+/* Anchor Tags Styling */
 a {
   text-decoration: none;
   color: white;
   font-size: 1rem;
 }
 
-/* navbar styling */
+/* Navbar Styling */
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -41,7 +55,7 @@ a {
   height: 10px;
   border-radius: 3px;
   margin-bottom: 10px;
-  background-color: #7e4eac;
+  background-color: var(--secondary);
 }
 
 .nav-menu {
@@ -52,20 +66,22 @@ a {
   background-color: rgba(0, 0, 0, 0);
   font-weight: 600;
 }
+
 .nav-menu a {
   display: block;
   text-align: center;
   padding: 5px 0;
 }
+
 .nav-menu a:hover {
-  color: var(---hover);
+  color: var(--hover);
 }
 
 .hide {
   display: none;
 }
 
-/* for Desktop view */
+/* Navbar Styling for Desktop View */
 @media screen and (min-width: 600px) {
   .navbar {
     justify-content: flex-end;
@@ -81,11 +97,12 @@ a {
     display: inline-block;
     padding: 15px 20px;
   }
-
   .hamburger-menu {
     display: none;
   }
 }
+
+/* Canvas Styling */
 canvas {
   position: absolute;
   top: 0;
@@ -94,11 +111,8 @@ canvas {
   height: 100%;
   z-index: -1;
 }
-.container{
-  position: absolute;
-  top: 0;
-  z-index: 10000;
-}
+
+/* Welcome Text Styling */
 .welcome {
   position: absolute;
   top: 50%;
@@ -107,95 +121,91 @@ canvas {
   text-align: center;
   font-size: 10rem;
   font-weight: bold;
-  color:#b572f495;
-  z-index: 1; /* Ensures the text is above the canvas */
+  color: #b572f495;
+  z-index: 1;
 }
-.heading-about h1{
-  margin-top:45%;
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
+
+/* About Section Styling */
+.about {
+  padding: 50px 20px;
   text-align: center;
-  color: #7e4eac;
+  margin-top: 40%;
+}
+
+.secondary_heading h1 {
+  margin: 3rem 0;
+  color: var(--secondary);
   font-size: 5rem;
-  
 }
-.heading-about span {
-  transition: font-wieght 0.4 ease-in;
-  animation: floating-secondary 2.5s cubic-bezier(0, 37, 0, 0.63, 1);
+
+/* About Text Animation */
+.secondary_heading span {
+  transition: font-weight 0.4 ease-in;
+  animation: floating-secondary 2.5s cubic-bezier(0, 0.37, 0, 0.63, 1);
 }
-.home span:nth-child(1) {
-  animation-delay: 1s;
-}
-.home span:nth-child(2) {
-  animation-delay: 2s;
-}
-.home span:nth-child(3) {
-  animation-delay: 3s;
-}
-.home span:nth-child(4) {
-  animation-delay: 4s;
-}
-.home span:nth-child(5) {
-  animation-delay: 5s;
-}
-.home span:nth-child(6) {
-  animation-delay: 6s;
-}
-.home span:nth-child(7) {
-  animation-delay: 7s;
-}
+
 .about span:hover {
   font-weight: 100;
 }
-@keyframes floating {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(0, 5vh);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
+
 @keyframes floating-secondary {
-  0% {
+  0%, 100% {
     transform: translate(0, 0);
   }
   50% {
     transform: translate(0, 5vh);
   }
-  100% {
-    transform: translate(0, 0);
-  }
 }
-@keyframes tilting {
-  0% {
-    transform: rotateY(1dedg);
-  }
-  50% {
-    transform: rotate(-1deg);
-  }
-  100% {
-    transform: rotate(1deg);
-  }
-}
-.cards-container{
-  justify-content: center;
+/* About Description Container Styling */
+.about_discription {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  display:flexbox;
-  align-items: flex-end;
-  gap: 30px;
-  margin-bottom: 50px;
+  padding: 20px;
+  gap: 20px;
 }
- 
+
+/* Styling for the Paragraph */
+.about_discription p {
+  flex: 1; /* Allows the paragraph to take up remaining space */
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;
+}
+
+/* Styling for the Image Container */
+.about_discription .element_img {
+  flex: 0 0 auto; /* Prevents the image from stretching */
+  max-width: 40%; /* Adjust width as needed */
+}
+
+.about_discription .element_img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Optional: Rounded corners for the image */
+}
+
+/* Details Section Styling */
+.details {
+ margin-top: 70%;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
 .card {
   position: relative;
   width: 220px;
   height: 320px;
-  background:var(---primary);
+  background: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -211,11 +221,6 @@ canvas {
   content: "";
   width: 20%;
   height: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  font-weight: bold;
   background-color: #7300bb3b;
   transition: all 0.5s;
 }
@@ -229,119 +234,64 @@ canvas {
 .card::after {
   bottom: 0;
   left: 0;
-  border-radius: 0 100%  0 15px;
+  border-radius: 0 100% 0 15px;
 }
 
 .card:hover::before,
-.card:hover:after {
+.card:hover::after {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  transition: all 0.5s;
 }
 
-.card:hover:after {
-  content: "HELLO";
+/* Contact Section Styling */
+.contact {
+  margin-top: 80%;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
 }
-/* From Uiverse.io by gharsh11032000 */ 
+
 .form-container {
-  
-  width: 100vh;
+  width: 100%;
+  max-width: 600px;
   background: linear-gradient(#2121212d, #21212123) padding-box,
-              linear-gradient(145deg, transparent 35%,#e81cff40, #40c9ff39) border-box;
+              linear-gradient(145deg, transparent 35%, #e81cff40, #40c9ff39) border-box;
   border: 2px solid transparent;
   padding: 32px 24px;
-  font-size: 14px;
-  font-family: inherit;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  box-sizing: border-box;
   border-radius: 16px;
-}
-
-.form-container button:active {
-  scale: 0.95;
-}
-
-.form-container .form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  color: white;
 }
 
 .form-container .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+  margin-bottom: 20px;
 }
 
-.form-container .form-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: #717171;
-  font-weight: 600;
-  font-size: 12px;
+.form-container label {
+  margin-bottom: 8px;
+  font-size: 14px;
 }
 
-.form-container .form-group input {
+.form-container input,
+.form-container textarea {
   width: 100%;
-  padding: 12px 16px;
-  border-radius: 8px;
-  color: #fff;
-  font-family: inherit;
+  padding: 10px;
+  margin-top: 5px;
   background-color: transparent;
   border: 1px solid #414141;
-}
-
-.form-container .form-group textarea {
-  width: 100%;
-  padding: 12px 16px;
+  color: white;
   border-radius: 8px;
-  resize: none;
-  color: #fff;
-  height: 96px;
-  border: 1px solid #414141;
-  background-color: transparent;
-  font-family: inherit;
 }
 
-.form-container .form-group input::placeholder {
-  opacity: 0.5;
-}
-
-.form-container .form-group input:focus {
-  outline: none;
-  border-color: #e81cff;
-}
-
-.form-container .form-group textarea:focus {
-  outline: none;
-  border-color:var(---primary);
-}
-
-.form-container .form-submit-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: flex-start;
-  font-family: inherit;
-  color: #ffffff;
-  font-weight: 600;
-  width: 40%;
-  background:var(---secondary);
-  border: 1px solid #414141;
-  padding: 12px 16px;
-  font-size: inherit;
-  gap: 8px;
-  margin-top: 8px;
+.form-container button {
+  padding: 10px 20px;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
-.form-container .form-submit-btn:hover {
-  background-color:var(---hover);
+.form-container button:hover {
+  background-color: var(--hover);
 }
-
-
