@@ -225,7 +225,9 @@ canvas {
   display: flex;
   justify-content: center; /* Center the buttons */
   gap: 10px; /* Spacing between buttons */
+  margin-top: 10px;
 }
+
 .element_img,
 .element_img2 {
   flex: 0 0 auto;
@@ -239,7 +241,47 @@ canvas {
   display: block;
   border-radius: 8px;
 }
+.btn_group {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 20px; /* Space between buttons */
+  margin: 20px 0; /* Add some vertical margin */
+}
 
+.btn_group .connect {
+  padding: 25px 65px; /* Button size */
+  border: none;
+  background-color:var(--secondary); /* Button color */
+  color: #fff; /* Text color */
+  font-size: 16px; /* Font size */
+  border-radius: 1cm; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.btn_group button a {
+  color: inherit; /* Inherit button text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.btn_group .connect:hover {
+  background-color: var(--hover); /* Darker blue on hover */
+}
+.btn_group .social-btn{
+ 
+  border: 2px solid var(--secondary);
+  padding: 25px 65px; /* Button size */
+  background-color: var(--bg-color);
+ 
+  color: #fff; /* Text color */
+  font-size: 16px; /* Font size */
+  border-radius: 1cm; /* Rounded corners */
+  cursor: pointer;
+ 
+}
+.btn_group .social-btn:hover {
+  background-color: var(--hover); /* Darker blue on hover */
+}
 
 /* Details Section Styling */
 .details {
