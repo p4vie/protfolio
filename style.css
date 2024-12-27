@@ -1,5 +1,5 @@
-/* Importing Font */
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+
 
 /* :root Variables for Colors */
 :root {
@@ -348,15 +348,17 @@ canvas {
   padding: 100px;
   display: flex;
   justify-content: center;
+  align-items: center; /* Align items vertically if needed */
+  flex-direction: column; /* Ensure heading and form stack vertically */
 }
 
 .form-container {
   width: 100%;
   max-width: 600px;
- 
   border: 2px solid transparent;
   padding: 32px 24px;
   border-radius: 16px;
+  background-color:none;
   color: white;
 }
 
@@ -367,6 +369,7 @@ canvas {
 .form-container label {
   margin-bottom: 8px;
   font-size: 14px;
+  display: block; /* Ensure label stays above input */
 }
 
 .form-container input,
@@ -375,9 +378,17 @@ canvas {
   padding: 10px;
   margin-top: 5px;
   background-color: transparent;
-  border: 1px solid #414141;
+  border: 1px solid #b7adbf;
   color: white;
   border-radius: 8px;
+  font-size: 16px; /* Added for consistent typography */
+  box-sizing: border-box; /* Ensure padding doesn't overflow */
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: var(--secondary); 
+  outline: none; 
 }
 
 .form-container button {
@@ -387,8 +398,21 @@ canvas {
   border: none;
   cursor: pointer;
   border-radius: 8px;
+  font-size: 16px; /* Consistent font size */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
 .form-container button:hover {
   background-color: var(--hover);
+}
+
+.st_heading {
+  margin-bottom: 20px; /* Space between heading and form */
+  text-align: center; /* Center align text */
+}
+
+.st_heading h2 {
+  font-size: 3rem; /* Adjust size for better readability */
+  color: var(--secondary); /* Secondary color for text */
+  margin: 0; /* Remove default margin */
 }
