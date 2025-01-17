@@ -1,4 +1,4 @@
-/* :root Variables for Colors */
+
 :root {
   --bg-color: #11001c;
   --primary: #2e165b;
@@ -8,14 +8,13 @@
 
 
 
-/* Resetting Default Margins/Paddings */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Global Body Styling */
 body {
   
   font-weight: 600;
@@ -31,7 +30,7 @@ body {
   
 }
 
-/* Anchor Tags Styling */
+/*nav style*/
 a {
   text-decoration: none;
   color: white;
@@ -39,7 +38,7 @@ a {
   
 }
 
-/* Navbar Styling */
+
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -441,7 +440,7 @@ canvas {
   transform: rotateX(-90deg) translateZ(75px);
 }
 
-/* Cube Rotation Animation */
+
 @keyframes rotateCube {
   0% {
     transform: rotateX(0deg) rotateY(0deg);
@@ -627,24 +626,23 @@ canvas {
   align-items: center;
   text-align: center;
   padding: 20px;
-  background-color: #1e013b; /* Optional: background color for the footer */
+  background-color: #1e013b; 
 }
 
 .footer-socials {
   display: flex;
   justify-content: center;
-  gap: 15px; /* Space between the images */
-  margin: 10px 0; /* Space around the socials section */
-}
+  gap: 15px;
+  margin: 10px 0;}
 
 .footer-socials img {
-  width: 30px; /* Adjust the size of the images */
-  height: 30px; /* Keep the images square */
-  transition: transform 0.3s; /* Smooth hover effect */
+  width: 30px; 
+  height: 30px; 
+  transition: transform 0.3s; 
 }
 
 .footer-socials img:hover {
-  transform: scale(1.2); /* Slightly enlarge on hover */
+  transform: scale(1.2); 
 }
 
 .footer-logo h1 {
@@ -654,5 +652,5 @@ canvas {
 
 .footer-credits p {
   font-size: 14px;
-  color: #555; /* Subtle text color */
+  color: #555; 
 }
