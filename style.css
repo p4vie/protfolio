@@ -17,7 +17,8 @@ body {
   background-color: var(--bg-color);
   color: white;
   height: 100%;
-  overflow: auto;
+
+  overflow-x: hidden;
 
   font-family: "Chakra Petch", serif;
   font-weight: 300;
@@ -108,7 +109,7 @@ a {
 .canvas-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
 }
 
@@ -259,6 +260,11 @@ canvas {
 .button_group button a {
   text-decoration: none;
   color: white;
+  border: none;
+  padding: 1rem 2rem; 
+  border-radius: 1cm;
+  cursor: pointer;
+  font-size: 0.8rem;
 }
 
 .btn_group {
@@ -301,7 +307,11 @@ canvas {
 .btn_group .social-btn:hover {
   background-color: var(--hover);
 }
-
+.btn_group .connect,
+.btn_group .social-btn {
+  padding: 20px 35px; /* Reduced padding */
+  font-size: 14px; /* Reduced font size */
+}
 /* Media Queries for Responsiveness */
 
 /* For screens 780px and below */
@@ -460,7 +470,10 @@ canvas {
     font-size: 0.8rem;
   }
 }
-
+.about_discription .element_img,
+.about_discription2 .element_img2 {
+  margin-top: 50px; 
+}
 /* Details Section Styling */
 .details {
   padding: 50px 20px;
@@ -469,7 +482,7 @@ canvas {
 
 .secondary_heading {
   margin: 3rem 0;
-  color: var(--secondary);
+color: var(--secondary);
   font-size: 3rem;
 }
 
