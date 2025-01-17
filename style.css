@@ -1,13 +1,9 @@
-
 :root {
   --bg-color: #11001c;
   --primary: #2e165b;
   --secondary: #7e4eac;
   --hover: #7400bb;
 }
-
-
-
 
 * {
   box-sizing: border-box;
@@ -16,18 +12,16 @@
 }
 
 body {
-  
   font-weight: 600;
   font-style: italic;
   background-color: var(--bg-color);
   color: white;
   height: 100%;
   overflow: auto;
- 
+
   font-family: "Chakra Petch", serif;
-    font-weight: 300;
-    font-style: normal;
-  
+  font-weight: 300;
+  font-style: normal;
 }
 
 /*nav style*/
@@ -35,9 +29,7 @@ a {
   text-decoration: none;
   color: white;
   font-size: 1rem;
-  
 }
-
 
 .navbar {
   display: flex;
@@ -269,8 +261,6 @@ canvas {
   color: white;
 }
 
-
-
 .btn_group {
   display: flex;
   justify-content: center;
@@ -322,8 +312,6 @@ canvas {
     align-items: center;
   }
 
-  
-
   .text_content {
     text-align: center;
     padding: 0 10px;
@@ -366,26 +354,22 @@ canvas {
     padding: 0.8rem 1.5rem;
     font-size: 0.8rem;
   }
-
-  
 }
 
 /* For medium screens (481px to 780px) */
 @media (min-width: 481px) and (max-width: 780px) {
   .text_content h2 {
-    font-size:4rem;
+    font-size: 4rem;
   }
 
   .text_content p {
-    font-size:3vh;
+    font-size: 3vh;
   }
 
   .button_group button {
     padding: 1.2rem 2.5rem;
     font-size: 0.9rem;
   }
-
- 
 }
 
 .element_img,
@@ -439,7 +423,6 @@ canvas {
 .cube .bottom {
   transform: rotateX(-90deg) translateZ(75px);
 }
-
 
 @keyframes rotateCube {
   0% {
@@ -626,23 +609,24 @@ canvas {
   align-items: center;
   text-align: center;
   padding: 20px;
-  background-color: #1e013b; 
+  background-color: #1e013b;
 }
 
 .footer-socials {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin: 10px 0;}
+  margin: 10px 0;
+}
 
 .footer-socials img {
-  width: 30px; 
-  height: 30px; 
-  transition: transform 0.3s; 
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
 }
 
 .footer-socials img:hover {
-  transform: scale(1.2); 
+  transform: scale(1.2);
 }
 
 .footer-logo h1 {
@@ -652,5 +636,5 @@ canvas {
 
 .footer-credits p {
   font-size: 14px;
-  color: #555; 
+  color: #555;
 }
