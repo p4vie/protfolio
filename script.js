@@ -14,9 +14,9 @@ const center = {
 };
 
 const params = {
-  radius: 250, // Base radius of the circle
-  morphStrength: 0.02, // How much the shape morphs
-  rotationSpeed: 0.0005, // Speed of rotation
+  radius: 250, // Base radius of the circle//
+  morphStrength: 0.02, // How much the shape morphs//
+  rotationSpeed: 0.0005, // Speed of rotation//
   colors: ["rgb(146, 8, 146)", "rgb(38, 5, 103)", "rgb(117, 8, 144)"],
 };
 
