@@ -60,7 +60,7 @@ function update() {
   ctx.closePath();
   ctx.restore();
 
-  // Fill with gradient when morphing
+  //  gradient when morphing
   const gradient = ctx.createLinearGradient(
     center.x - params.radius,
     center.y - params.radius,

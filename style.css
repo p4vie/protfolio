@@ -309,12 +309,12 @@ canvas {
 }
 .btn_group .connect,
 .btn_group .social-btn {
-  padding: 20px 35px; /* Reduced padding */
-  font-size: 14px; /* Reduced font size */
+  padding: 20px 35px; 
+  font-size: 14px; 
 }
 /* Media Queries for Responsiveness */
 
-/* For screens 780px and below */
+
 @media (max-width: 780px) {
   .about_discription,
   .about_discription2 {
@@ -346,7 +346,7 @@ canvas {
   }
 }
 
-/* For small screens (480px and below) */
+
 @media (max-width: 480px) {
   .secondary_heading h1 {
     font-size: 2.5rem;
@@ -366,7 +366,7 @@ canvas {
   }
 }
 
-/* For medium screens (481px to 780px) */
+
 @media (min-width: 481px) and (max-width: 780px) {
   .text_content h2 {
     font-size: 4rem;
